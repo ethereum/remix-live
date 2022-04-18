@@ -147,7 +147,7 @@ const MOLLYJS_CLASS = function( front_path, back_path ){
 			headers["Access-Control-Allow-Origin"] = "*";
 		}
 		
-		return headers();
+		return headers;
 	}
 	
 	mollyJS.router = function( req,res ){
