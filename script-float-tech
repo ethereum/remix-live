@@ -1,0 +1,55 @@
+// Set the version of Solidity to use
+pragma solidity ^0.8.0;
+
+// Define the contract
+contract FloatTech {
+    // Define variables
+    string public name = "FloatTech";
+    string public symbol = "FLOT";
+    uint256 public totalSupply = 7777777 * 10**18; // 7777777 koin, dengan 18 desimal
+    uint8 public decimals = 18;
+    uint256 public miningReward = 1 * 10**18; // 1 koin, dengan 18 desimal
+    uint256 public lastBlockMined;
+    mapping(address => uint256) public balanceOf;
+
+    // Define events
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Mining(address indexed miner, uint256 reward);
+
+    // Constructor
+    constructor() {
+        balanceOf[msg.sender] = totalSupply;
+    }
+
+    // Mining function
+    function mine() public {
+        require(balanceOf[msg.sender] > 0, "You must have a positive balance to mine.");
+        require(block.timestamp >= lastBlockMined + 1 minutes, "You must wait at least 1 minute between mining attempts.");
+        balanceOf[msg.sender] += miningReward;
+        lastBlockMined = block.timestamp;
+        emit Mining(msg.sender, miningReward);
+    }
+
+    // Transfer function
+    function transfer(address to, uint256 value) public returns (bool success) {
+        require(value > 0, "Value must be greater than 0.");
+        require(balanceOf[msg.sender] >= value, "You do not have enough balance to complete this transfer.");
+        require(balanceOf[to] + value >= balanceOf[to], "Overflow detected.");
+        balanceOf[msg.sender] -= value;
+        balanceOf[to] += value;
+        emit Transfer(msg.sender, to, value);
+        return true;
+    }
+
+    // Transfer function with gas fee
+    function transferWithFee(address to, uint256 value) public returns (bool success) {
+        require(value > 0, "Value must be greater than 0.");
+        require(balanceOf[msg.sender] >= value, "You do not have enough balance to complete this transfer.");
+        require(balanceOf[to] + value >= balanceOf[to], "Overflow detected.");
+        balanceOf[msg.sender] -= value;
+        balanceOf[to] += value - 1; // Deduct 1 for gas fee
+        balanceOf[address(this)] += 1; // Add 1 to contract's balance for gas fee
+        emit Transfer(msg.sender, to, value);
+        return true;
+    }
+}
