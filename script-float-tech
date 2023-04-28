@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 contract FloatTech {
     // Define variables
     string public name = "FloatTech";
-    string public symbol = "FLOT";
+    string public symbol = "FLOAT";
     uint256 public totalSupply = 7777777 * 10**18; // 7777777 koin, dengan 18 desimal
     uint8 public decimals = 18;
     uint256 public miningReward = 1 * 10**18; // 1 koin, dengan 18 desimal
