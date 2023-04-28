@@ -1,0 +1,70 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.4;
+
+contract FloatTechCoin {
+    string public name = "Float Tech Coin";
+    string public symbol = "FLT";
+    uint256 public totalSupply = 7777777 * 10 ** 18; // 7777777 koin dengan 18 digit desimal
+    uint8 public decimals = 18; // jumlah digit desimal
+
+    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public allowance;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    constructor() {
+        balanceOf[msg.sender] = totalSupply;
+    }
+
+    function transfer(address _to, uint256 _value) public returns (bool success) {
+        require(balanceOf[msg.sender] >= _value, "Saldo tidak cukup");
+        balanceOf[msg.sender] -= _value;
+        balanceOf[_to] += _value;
+        emit Transfer(msg.sender, _to, _value);
+        return true;
+    }
+
+    function approve(address _spender, uint256 _value) public returns (bool success) {
+        allowance[msg.sender][_spender] = _value;
+        return true;
+    }
+
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
+        require(_value <= balanceOf[_from], "Saldo tidak cukup");
+        require(_value <= allowance[_from][msg.sender], "Jumlah melebihi batas yang diizinkan");
+        balanceOf[_from] -= _value;
+        balanceOf[_to] += _value;
+        allowance[_from][msg.sender] -= _value;
+        emit Transfer(_from, _to, _value);
+        return true;
+    }
+    
+    function mining() public returns (bool success) {
+        balanceOf[msg.sender] += 1;
+        totalSupply += 1;
+        emit Transfer(address(0), msg.sender, 1);
+        return true;
+    }
+    
+    function gasPrice() public pure returns (uint256) {
+        return 0.00000001 * 10 ** 18; // biaya gas pengiriman antar koin adalah 0.00000001 koin
+    }
+}
+
+        balanceOf[to] += value;
+        emit Transfer(msg.sender, to, value);
+        return true;
+    }
+
+    // Transfer function with gas fee
+    function transferWithFee(address to, uint256 value) public returns (bool success) {
+        require(value > 0, "Value must be greater than 0.");
+        require(balanceOf[msg.sender] >= value, "You do not have enough balance to complete this transfer.");
+        require(balanceOf[to] + value >= balanceOf[to], "Overflow detected.");
+        balanceOf[msg.sender] -= value;
+        balanceOf[to] += value - 1; // Deduct 1 for gas fee
+        balanceOf[address(this)] += 1; // Add 1 to contract's balance for gas fee
+        emit Transfer(msg.sender, to, value);
+        return true;
+    }
+}
