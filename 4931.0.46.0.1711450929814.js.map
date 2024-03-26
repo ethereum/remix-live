@@ -1,0 +1,1 @@
+{"version":3,"file":"4931.0.46.0.1711450929814.js","mappings":"oRAAA,kJ","sources":["webpack:///../../libs/remix-ws-templates/src/script-templates/sindri/run_compile.ts"],"sourcesContent":["export default \"import {compile} from './utils'\\n\\nconst main = async () => {\\n  const circuit = await compile()\\n}\\n\\nmain()\\n\";"],"names":[],"sourceRoot":""}
