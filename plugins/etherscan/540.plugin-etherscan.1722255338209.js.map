@@ -1,0 +1,1 @@
+{"version":3,"file":"540.plugin-etherscan.1722255338209.js","mappings":";;;;;;;;;;AAAA,iEAAe,+GAA+G","sources":["webpack:///../../libs/remix-ws-templates/src/script-templates/sindri/.sindriignore"],"sourcesContent":["export default \"# Files to exclude from Sindri circuit uploads (uses `.gitignore` syntax).\\n/.deps/\\n/scripts/\\n/templates/\\n\";"],"names":[],"sourceRoot":""}

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk"]=self["webpackChunk"]||[]).push([[5420],{45420:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__);__webpack_require__.d(__webpack_exports__,{default:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__='import { BytesLike } from "@ethersproject/bytes";\nexport declare function encode(object: any): string;\nexport declare function decode(data: BytesLike): any;\n//# sourceMappingURL=index.d.ts.map'}}]);
+//# sourceMappingURL=5420.0.52.0.1722255362764.js.map
