@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA;IACI,gBAAgB;IAChB,eAAe;AACnB,C","sources":["webpack:///../../libs/remix-ui/clipboard/src/lib/copy-to-clipboard/copy-to-clipboard.css"],"sourcesContent":[".copyIcon {\n    margin-left: 5px;\n    cursor: pointer;\n}"],"names":[],"sourceRoot":""}
