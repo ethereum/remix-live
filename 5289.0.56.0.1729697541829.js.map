@@ -1,0 +1,1 @@
+{"version":3,"file":"5289.0.56.0.1729697541829.js","mappings":"qRAAA,yH","sources":["webpack:///../../node_modules/ethers/lib/_version.d.ts"],"sourcesContent":["export default \"export declare const version = \\\"ethers/5.7.2\\\";\\n//# sourceMappingURL=_version.d.ts.map\";"],"names":[],"sourceRoot":""}

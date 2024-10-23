@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk"]=self["webpackChunk"]||[]).push([[5289],{595289:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__);__webpack_require__.d(__webpack_exports__,{default:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__='export declare const version = "ethers/5.7.2";\n//# sourceMappingURL=_version.d.ts.map'}}]);
+//# sourceMappingURL=5289.0.56.0.1729697541829.js.map
