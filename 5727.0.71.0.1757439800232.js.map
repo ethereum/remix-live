@@ -1,0 +1,1 @@
+{"version":3,"file":"5727.0.71.0.1757439800232.js","mappings":"qRAAA,8J","sources":["webpack:///../../libs/remix-ws-templates/src/templates/introToEIP7702/contracts/Example7702.sol"],"sourcesContent":["export default \"import \\\"https://github.com/eth-infinitism/account-abstraction/blob/releases/v0.8/contracts/accounts/Simple7702Account.sol\\\";\";"],"names":[],"sourceRoot":""}

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk"]=self["webpackChunk"]||[]).push([[5727],{715727:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__);__webpack_require__.d(__webpack_exports__,{default:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__='import "https://github.com/eth-infinitism/account-abstraction/blob/releases/v0.8/contracts/accounts/Simple7702Account.sol";'}}]);
+//# sourceMappingURL=5727.0.71.0.1757439800232.js.map

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk"]=self["webpackChunk"]||[]).push([[1904],{681904:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__);__webpack_require__.d(__webpack_exports__,{default:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__='{\n  "defaultConfig": "ethers6",\n  "customConfig": {\n    "baseConfiguration": "default",\n    "dependencies": []\n  }\n}'}}]);
+//# sourceMappingURL=1904.0.71.0.1757439800232.js.map

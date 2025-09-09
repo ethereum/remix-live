@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk"]=self["webpackChunk"]||[]).push([[3525],{223525:(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__);__webpack_require__.d(__webpack_exports__,{default:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__="pub fn multiplier2(a: Field, b: Field) -> Field {\n    a * b\n}\n\nfn main(a: Field, b: Field) -> pub Field {\n    let c = multiplier2(a, b);\n\n    c\n}\n"}}]);
+//# sourceMappingURL=3525.0.71.0.1757439800232.js.map
